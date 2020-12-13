@@ -1,5 +1,5 @@
 {
-	"name": "CopyDataToSqlDB",
+	"name": "CopyDataToSqlDBWithParmeter",
 	"properties": {
 		"activities": [
 			{
@@ -52,7 +52,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"fileName": {
-								"value": "@pipeline().parameters.fileName",
+								"value": "@concat(pipeline().parameters.fileName,'.csv')",
 								"type": "Expression"
 							}
 						}
@@ -134,6 +134,16 @@
 						}
 					}
 				]
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "temp",
+					"value": ""
+				}
 			}
 		],
 		"parameters": {
@@ -142,6 +152,11 @@
 			},
 			"tableName": {
 				"type": "string"
+			}
+		},
+		"variables": {
+			"temp": {
+				"type": "String"
 			}
 		},
 		"annotations": []
