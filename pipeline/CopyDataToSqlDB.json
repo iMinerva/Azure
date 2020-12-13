@@ -42,13 +42,19 @@
 				"inputs": [
 					{
 						"referenceName": "InputCSV",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"fileName": "cars.csv"
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "OutputTable",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"tableName": "cars"
+						}
 					}
 				]
 			}
