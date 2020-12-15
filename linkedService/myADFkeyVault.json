@@ -1,0 +1,10 @@
+{
+	"name": "myADFkeyVault",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://bitakeyvault.vault.azure.net/"
+		}
+	}
+}
